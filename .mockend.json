@@ -18,10 +18,5 @@
     "comments": {
       "hasMany": "Comment"
     }
-  },
-  "Comment": {
-    "body": {
-      "string": {}
-    }
   }
 }
