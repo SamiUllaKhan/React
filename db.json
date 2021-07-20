@@ -1,0 +1,18 @@
+{
+    "categories":[
+        {
+            "categoryName":"Summer Collection",
+            "id":1,
+            "description":"Women wearing structured blazers, gathering together to support empowerement movements on the red carpet and feeling confident in minimalist pencil dresses made by independent and ethical brands – during the past few seasons, power dressing got a whole new meaning to it. To help you find the pieces for your personal “power closet”, we created an essentials list inspired by one of our style heroes, Meghan Markle.",
+            "image":"category1.jpg",
+            "tags":"men, women, kids"
+        },
+        {
+            "categoryName":"Winter Collection",
+            "id":1,
+            "description":"Women wearing structured blazers, gathering together to support empowerement movements on the red carpet and feeling confident in minimalist pencil dresses made by independent and ethical brands – during the past few seasons, power dressing got a whole new meaning to it. To help you find the pieces for your personal “power closet”, we created an essentials list inspired by one of our style heroes, Meghan Markle.",
+            "image":"category1.jpg",
+            "tags":"men, women, kids"
+        }
+      ]
+}
