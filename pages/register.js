@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-/* eslint-disable react/no-unescaped-entities */
+
 import {
   Stack,
   Flex,
@@ -19,7 +18,7 @@ import {
 } from '@chakra-ui/react'
 import DarkModeSwitch from '../components/DarkModeSwitch'
 
-export default function register() {
+export default function Register() {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <>
@@ -38,7 +37,7 @@ export default function register() {
                   <Center mb={2}>Register Now!</Center>
                   <Center>
                     <Text fontSize="xs">
-                      We'll never share your information to any
+                      We&apos;ll never share your information to any
                     </Text>
                   </Center>
               </Heading>

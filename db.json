@@ -14,5 +14,11 @@
             "image":"category1.jpg",
             "tags":"men, women, kids"
         }
-      ]
+      ],
+    
+    "products": [
+        {
+            "name": ""
+        }
+    ]
 }
