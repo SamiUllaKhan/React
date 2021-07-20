@@ -20,16 +20,16 @@ export default function Home() {
   return (
     <>
       <Flex w="90%" p={3} m={1}>
-        <Flex top="1em" right="1em" justify="space-between">
-          <Flex>
+        <Flex top="1em" right="1em">
+          <Flex  align="center">
             <Link href="/" passHref>
-              <Button as="a" variant="ghost" aria-label="Home" my={5}>
+              <a variant="ghost" aria-label="Home" my={5}>
                 {colorMode === 'dark' ? (
                   <Image src="/white.png.png" w="100px" alt="Logo" />
                 ) : (
                   <Image src="/white.png.png" w="100px" alt="Logo" />
                 )}
-              </Button>
+              </a>
             </Link>
             
             <Link href="/" passHref>
