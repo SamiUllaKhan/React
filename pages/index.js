@@ -1,5 +1,6 @@
 import {
-  Spacer,
+  InputGroup,
+  InputLeftElement,
   Stack,
   Flex,
   Heading,
@@ -9,53 +10,59 @@ import {
   Image,
   Text,
   useColorMode,
-} from '@chakra-ui/react'
+  Spacer,
+  Box,
+} from "@chakra-ui/react";
 
-import { ChevronDownIcon } from '@chakra-ui/icons'
-import DarkModeSwitch from '../components/DarkModeSwitch'
-import Link from 'next/link'
+import { SearchIcon } from "@chakra-ui/icons";
+import DarkModeSwitch from "../components/DarkModeSwitch";
+import Link from "next/link";
 
 export default function Home() {
-  const { colorMode, toggleColorMode } = useColorMode()
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Flex w="90%" p={3} m={1}>
-        <Flex top="1em" right="1em">
-          <Flex  align="center">
+      <Flex>
+        <Flex w="100%">
+          <Flex p={3} m={1} align="center" w="100%">
             <Link href="/" passHref>
               <a variant="ghost" aria-label="Home" my={5}>
-                {colorMode === 'dark' ? (
+                {colorMode === "dark" ? (
                   <Image src="/white.png.png" w="100px" alt="Logo" />
                 ) : (
                   <Image src="/white.png.png" w="100px" alt="Logo" />
                 )}
               </a>
             </Link>
-            
-            <Link href="/" passHref>
-              <Button as="a" variant="ghost" aria-label="Home" my={5}>
-                Home
-              </Button>
-            </Link>
-            <Link href="/" passHref>
-              <Button as="a" variant="ghost" aria-label="Home" my={5}>
-                Products
-              </Button>
-            </Link>
-            <Link href="/" passHref>
-              <Button as="a" variant="ghost" aria-label="Home" my={5}>
-                About Us
-              </Button>
-            </Link>
-            <Link href="/" passHref>
-              <Button as="a" variant="ghost" aria-label="Home" my={5}>
-                Contact Us
-              </Button>
-            </Link>
+            <Spacer />
+
+            <Flex top="1em" right="1em" align="center">
+              <Link href="/" passHref>
+                <Button as="a" variant="ghost" aria-label="Home" my={5}>
+                  About Us
+                </Button>
+              </Link>
+              <Link href="/" passHref>
+                <Button as="a" variant="ghost" aria-label="Home" my={5}>
+                  Contact Us
+                </Button>
+              </Link>
+            </Flex>
+            <Spacer />
+            <InputGroup w="50%">
+              <InputLeftElement
+                pointerEvents="none"
+                children={<SearchIcon color="gray.300" />}
+              />
+              <Input type="text" placeholder="Search the products" />
+            </InputGroup>
+            <Spacer />
+
             <DarkModeSwitch />
           </Flex>
         </Flex>
       </Flex>
+
       <Stack as="main" align="center">
         <Flex
           flexDirection="column"
@@ -77,7 +84,7 @@ export default function Home() {
           </Button>
           <Link href="/register" passHref>
             <Text fontSize="sm" mt={1}>
-              {' '}
+              {" "}
               Register Now!
             </Text>
           </Link>
@@ -86,5 +93,5 @@ export default function Home() {
         <Flex justify="end">Developed By Sami</Flex>
       </Stack>
     </>
-  )
+  );
 }
