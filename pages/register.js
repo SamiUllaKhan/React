@@ -1,4 +1,3 @@
-
 import {
   Stack,
   Flex,
@@ -11,43 +10,32 @@ import {
   Select,
   Input,
   Textarea,
-  useColorMode,
   Button,
   Grid,
   SimpleGrid,
 } from '@chakra-ui/react'
-import DarkModeSwitch from '../components/DarkModeSwitch'
 
 export default function Register() {
-  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <>
       <Stack as="main" align="center">
-        <Flex w="90%" p={3} m={1} justify="space-between">
-          {colorMode === 'dark' ? (
-            <Image src="/white.png.png" w="100px" alt="Logo" />
-          ) : (
-            <Image src="/white.png.png" w="100px" alt="Logo" />
-          )}
-          <DarkModeSwitch />
-        </Flex>
-        <Grid
-            gap={2}>
-            <Heading as="h5" size="sm" colSpan={1}>
-                  <Center mb={2}>Register Now!</Center>
-                  <Center>
-                    <Text fontSize="xs">
-                      We&apos;ll never share your information to any
-                    </Text>
-                  </Center>
-              </Heading>
-          </Grid>
+        <Grid gap={2}>
+          <Heading as="h5" size="sm" colSpan={1}>
+            <Center mb={2}>Register Now!</Center>
+            <Center>
+              <Text fontSize="xs">
+                We&apos;ll never share your information to any
+              </Text>
+            </Center>
+          </Heading>
+        </Grid>
         <Flex p={8} borderWidth="1px" borderRadius="lg">
-            <SimpleGrid
-              columns={{ sm: 1, md: 2 }}
-              flexDirection="column"
-              spacingX="20px"
-              spacingY="10px">
+          <SimpleGrid
+            columns={{ sm: 1, md: 2 }}
+            flexDirection="column"
+            spacingX="20px"
+            spacingY="10px"
+          >
             <FormControl id="first-name" isRequired>
               <FormLabel>First name</FormLabel>
               <Input size="sm" placeholder="First name" />
